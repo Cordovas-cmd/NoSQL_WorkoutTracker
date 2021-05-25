@@ -132,3 +132,34 @@ async function handleFormSubmit(event) {
     }
   }
   
+  // clears inputs for every field.
+  function clearInputs() {
+    cardioNameInput.value = "";
+    nameInput.value = "";
+    setsInput.value = "";
+    distanceInput.value = "";
+    durationInput.value = "";
+    repsInput.value = "";
+    resistanceDurationInput.value = "";
+    weightInput.value = "";
+  }
+  //handles what happens when you want to change workout
+  if (workoutTypeSelect) {
+    workoutTypeSelect.addEventListener("change", handleWorkoutTypeChange);
+  }
+  // what to do when complete button is clicked.
+  if (completeButton) {
+    completeButton.addEventListener("click", function (event) {
+      shouldNavigateAway = true;
+      handleFormSubmit(event);
+    });
+  }
+  //what to do when add button is clicked
+  if (addButton) {
+    addButton.addEventListener("click", handleFormSubmit);
+  }
+  toast.addEventListener("animationend", handleToastAnimationEnd);
+  
+  document
+    .querySelectorAll("input")
+    .forEach(element => element.addEventListener("input", validateInputs));
