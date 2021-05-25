@@ -32,3 +32,19 @@ async function initExercise() {
 }
 //callback to original function above.
 initExercise();
+
+// function for changing workout type with eventhandler.
+function handleWorkoutTypeChange(event) {
+    workoutType = event.target.value;
+  
+    if (workoutType === "cardio") {
+      cardioForm.classList.remove("d-none");
+      resistanceForm.classList.add("d-none");
+    } else if (workoutType === "resistance") {
+      resistanceForm.classList.remove("d-none");
+      cardioForm.classList.add("d-none");
+    } else {
+      cardioForm.classList.add("d-none");
+      resistanceForm.classList.add("d-none");
+    }
+  
