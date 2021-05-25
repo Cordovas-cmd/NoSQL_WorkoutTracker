@@ -36,3 +36,18 @@ async function initWorkout() {
     //return updated
     return tallied;
   }
+
+  function formatDate(date) {
+    const options = {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    };
+  
+    return new Date(date).toLocaleDateString(options);
+  }
+  //tell where to show bupdated data from html selection.
+  function renderWorkoutSummary(summary) {
+    const container = document.querySelector(".workout-stats");
+  
