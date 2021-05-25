@@ -1,20 +1,32 @@
 {
-  "name": "mongoose_skeleton",
+  "name": "NoSQL_WorkoutTracker",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.11",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7",
+    "seeds": "^2.3.1"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "watch": "nodemon server.js",
-    "seed": "node seeders/seed.js"
+    "seed": "node seeders/seed.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cordovas-cmd/NoSQL_WorkoutTracker.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "dotenv": "^8.2.0",
-    "express": "^4.16.3",
-    "mongoose": "^5.3.16",
-    "morgan": "^1.9.1"
-  }
+  "bugs": {
+    "url": "https://github.com/Cordovas-cmd/NoSQL_WorkoutTracker/issues"
+  },
+  "homepage": "https://github.com/Cordovas-cmd/NoSQL_WorkoutTracker#readme"
 }
