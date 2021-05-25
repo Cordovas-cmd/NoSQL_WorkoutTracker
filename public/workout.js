@@ -15,3 +15,24 @@ async function initWorkout() {
         numExercises: lastWorkout.exercises.length,
         ...tallyExercises(lastWorkout.exercises)
       };
+// render summary of data based on above input
+      renderWorkoutSummary(workoutSummary);
+    } else {
+      renderNoWorkoutText()
+    }
+  }
+  //tally the data
+  function tallyExercises(exercises) {
+    const tallied = exercises.reduce((acc, curr) => {
+      if (curr.type === "resistance") {
+        acc.totalWeight = (acc.totalWeight || 0) + curr.weight;
+        acc.totalSets = (acc.totalSets || 0) + curr.sets;
+        acc.totalReps = (acc.totalReps || 0) + curr.reps;
+      } else if (curr.type === "cardio") {
+        acc.totalDistance = (acc.totalDistance || 0) + curr.distance;
+      }
+      return acc;
+    }, {});
+    //return updated
+    return tallied;
+  }
