@@ -119,3 +119,16 @@ async function handleFormSubmit(event) {
       workoutData.duration = Number(resistanceDurationInput.value.trim());
     }
   
+    //what to do before and after recieving updated data
+    await API.addExercise(workoutData);
+    clearInputs();
+    toast.classList.add("success");
+  }
+  // after animation over navigate away
+  function handleToastAnimationEnd() {
+    toast.removeAttribute("class");
+    if (shouldNavigateAway) {
+      location.href = "/";
+    }
+  }
+  
