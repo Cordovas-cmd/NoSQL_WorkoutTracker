@@ -22,12 +22,11 @@ Just enter the workout and save it to your logs for easy tracking, simple as tha
 
 ## Built With
 
-* [Mongoose](https://openweathermap.org/) - I used Open Weather Map to grab current and future weather of the location you select.
-* [ORM](https://github.com/erikflowers/weather-icons/) - We used Erik Flowers' beautiful weather icons.
-* [Node](https://bulma.io/documentation/) - I used Bulma CSS framework. 
-* [Express](https://unsplash.com/) - I used copyright-free images from this site.
-* [MongoDB](https://fonts.google.com/) .
-
+* [Mongoose]
+* [ORM]
+* [Node]
+* [Express]
+* [MongoDB]
 ## Author
 
 Samuel Cordova
